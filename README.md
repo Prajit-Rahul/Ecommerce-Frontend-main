@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Ecommerce Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React storefront for a full-stack ecommerce application with category browsing, authentication flows, cart management, and Stripe-based checkout.
 
-## Available Scripts
+This project pairs with the Spring Boot backend in [Ecommerce-Backend-main](https://github.com/Prajit-Rahul/Ecommerce-Backend-main).
 
-In the project directory, you can run:
+## What It Includes
 
-### `npm start`
+- Category-based shopping experience
+- Product cards and collection views
+- Sign in and sign up pages
+- Redux-managed cart state
+- Quantity updates inside the cart overlay
+- Stripe checkout integration
+- React Router-based navigation across storefront pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React 18
+- React Router
+- Redux and Redux Thunk
+- Material UI
+- Axios / Fetch
+- Stripe
 
-### `npm test`
+## Main Routes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `/home`: landing page
+- `/shops`: category-driven storefront
+- `/signup`: authentication page
+- `/contact`: contact page
+- `/hats`, `/sneakers`, `/jackets`, `/womens`, `/mens`: collection pages
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `src/Components/home`: landing page UI
+- `src/Components/shop`: storefront and category listing
+- `src/Components/card` and `src/Components/card-list`: product display
+- `src/Components/authentication`, `login`, `signup`: auth flow
+- `src/Components/cart-items`: cart overlay and checkout interaction
+- `src/Components/redux`: async data fetching and cart state management
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Backend Integration
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The frontend fetches category and user data from the paired backend API and is designed to work with:
 
-### `npm run eject`
+- category endpoints under `/api/category`
+- user registration under `/api/user/registration`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Running Locally
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The app runs with Create React App defaults. Start the backend separately so storefront and registration requests can resolve correctly.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Why This Repo Matters
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This repo shows practical frontend application work beyond static pages: stateful UI, API integration, checkout flow, and a modular component structure for an end-to-end shopping experience.
